@@ -1,0 +1,15 @@
+{
+  "name": "com.crecheng.reflectionrun",
+  "displayName": "ReflectionRun",
+  "version": "2.1.3",
+  "unity": "2020.3",
+  "description": "反射查看工具",
+  "keywords": [
+  ],
+  "author": {
+    "name": "crecheng"
+  },
+  "unityRelease": "33f1",
+  "type": "library",
+  "documentationUrl": ""
+}
