@@ -163,6 +163,14 @@ namespace ReflectionRun
                 RuntimeWindow.OpenPropertyEditor(obj);
         }
 
+        public static void NewWindow(bool isEditor, VisualElement visualElement,string title)
+        {
+            if (isEditor)
+                EditorWindow.NewWindow(visualElement,title);
+            else
+                RuntimeWindow.NewWindow(visualElement,title);
+        }
+
         #endregion
 
 

@@ -14,6 +14,8 @@ namespace ReflectionRun
         public VisualElement CreateClassWindow(object obj);
         public VisualElement CreateListViewWindow(IList list);
 
+        public void NewWindow(VisualElement visualElement,string title);
+
         public virtual void OpenPropertyEditor(UnityEngine.Object obj)
         {
             Debug.Log("only editor window!");

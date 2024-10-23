@@ -51,5 +51,13 @@ namespace ReflectionRun
             }
             return windows;
         }
+
+        public void NewWindow(VisualElement visualElement, string title)
+        {
+            if (NeedWindows)
+            {
+                _windows.AddWindow(visualElement,title);
+            }
+        }
     }
 }

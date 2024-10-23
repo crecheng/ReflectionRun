@@ -6,5 +6,11 @@
         {
             return new StringFindModule();
         }
+        
+        
+        private static StringToMethodInvokeModule StringToMethodInvokeModule()
+        {
+            return new StringToMethodInvokeModule();
+        }
     }
 }

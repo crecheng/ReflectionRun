@@ -17,9 +17,14 @@ namespace ReflectionRun.Editor
             wnd.titleContent = new GUIContent("ReflectionRunMainWindow");
         }
 
-        private void CreateGUI()
+        public static void EditorInit()
         {
             EditorFactory.Init();
+        }
+
+        private void CreateGUI()
+        {
+            EditorInit();
             var main = new ReflectionRunMainEditorWindowInternal(true);
             rootVisualElement.Add(main);
         }

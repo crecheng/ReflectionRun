@@ -11,25 +11,39 @@ namespace ReflectionRun.Editor
     {
         public VisualElement CreateClassWindow(Type type)
         {
-            ReflectionClassEditorWindow wnd = EditorWindow.CreateWindow<ReflectionClassEditorWindow>(typeof(ReflectionClassEditorWindow));
+            ReflectionClassEditorWindow wnd =
+                EditorWindow.CreateWindow<ReflectionClassEditorWindow>(typeof(ReflectionClassEditorWindow));
             wnd.titleContent = new GUIContent(type.Name);
             wnd.Window.SetType(type);
             return wnd.rootVisualElement;
         }
-        public  VisualElement CreateClassWindow(object obj)
+
+        public VisualElement CreateClassWindow(object obj)
         {
-            ReflectionClassEditorWindow wnd = EditorWindow.CreateWindow<ReflectionClassEditorWindow>(typeof(ReflectionClassEditorWindow));
+            ReflectionClassEditorWindow wnd =
+                EditorWindow.CreateWindow<ReflectionClassEditorWindow>(typeof(ReflectionClassEditorWindow));
             wnd.titleContent = new GUIContent(obj.GetType().Name);
             wnd.Window.SetObject(obj);
             return wnd.rootVisualElement;
         }
+
         public VisualElement CreateListViewWindow(IList list)
         {
-            ReflectionListObjEditorWindow wnd = EditorWindow.CreateWindow<ReflectionListObjEditorWindow>(typeof(ReflectionListObjEditorWindow));
+            ReflectionListObjEditorWindow wnd =
+                EditorWindow.CreateWindow<ReflectionListObjEditorWindow>(typeof(ReflectionListObjEditorWindow));
             wnd.titleContent = new GUIContent(list.GetType().Name);
             wnd.Window.SetList(list);
             return wnd.rootVisualElement;
         }
+
+        public void NewWindow(VisualElement visualElement, string title)
+        {
+            ReflectionRunContainerEditorWindow wnd =
+                EditorWindow.CreateWindow<ReflectionRunContainerEditorWindow>(typeof(ReflectionClassEditorWindow));
+            wnd.titleContent = new GUIContent("title");
+            wnd.rootVisualElement.Add(visualElement);
+        }
+
 
         public void OpenPropertyEditor(Object obj)
         {
